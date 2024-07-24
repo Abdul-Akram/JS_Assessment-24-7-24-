@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-7-2024</title>
+</head>
+
+<body>
+    <script>
+        // Implement Queue with array using java Script? 
+        //  class Queue {
+        //   constructor() {
+        //     this.items = [];
+        //   }
+
+        //   // Add an item to the end of the queue
+        //   enqueue(item) {
+        //     this.items.push(item);
+        //   }
+
+        //   // Remove an item from the front of the queue
+        //   dequeue() {
+        //     if (this.isEmpty()) {
+        //       throw new Error("Queue is empty");
+        //     }
+        //     return this.items.shift();
+        //   }
+
+        //   // Check if the queue is empty
+        //   isEmpty() {
+        //     return this.items.length === 0;
+        //   }
+
+        //   // Get the size of the queue
+        //   size() {
+        //     return this.items.length;
+        //   }
+
+        //   // Get the front item of the queue
+        //   front() {
+        //     if (this.isEmpty()) {
+        //       throw new Error("Queue is empty");
+        //     }
+        //     return this.items[0];
+        //   }
+
+        //   // Get the rear item of the queue
+        //   rear() {
+        //     if (this.isEmpty()) {
+        //       throw new Error("Queue is empty");
+        //     }
+        //     return this.items[this.items.length - 1];
+        //   }
+
+        //   // Print the queue
+        //   print() {
+        //     console.log(this.items);
+        //   }
+        // }
+// --------------------------------------------------------------------------------------
+        // Stack Using Array in Java Script?
+
+        // class Stack{
+        //     constructor(){
+        //         this.items = [];
+        //     }
+
+        //     push(item){
+        //         return this.items.push(item);
+        //     }
+
+        //     pull(item){
+        //         return this.items.pop(item);
+        //     }
+
+        //     peek(item){
+        //         return this.items[this.items.length - 1];
+        //     }
+        //     print(item){
+        //         console.log(this.items);
+        //     }
+        // }
+// ----------------------------------------------------------------------------------------------------------------------
+        // Flattern an Array
+
+        // let array = [1, 2, 3, 4, [5, 6, 7], 3, 2, [2, 3]]
+        //     let flatArray = []
+        //     for (let i = 0; i < array.length; i++) {
+        //         if (Array.isArray(array[i])) {
+        //             flatArray = flatArray.concat(array[i])
+        //         } else {
+        //             flatArray.push(array[i])
+        //         }
+        //     }
+        //     console.log(flatArray)
+// ---------------------------------------------------------------------------------------------------------------------
+        // Flattern an Array Without Duplicates
+
+        // let array = [1, 2, 3, 4, [5, 6, 7], 3, 2, [2, 3]];
+        //     let seen = new Set();
+
+        //     for (let i of array) {
+        //         if (Array.isArray(i)) {
+        //             for (let j of i) {
+        //                 seen.add(j);
+        //             }
+        //         } else {
+        //             seen.add(i);
+        //         }
+        //     }
+
+        //     let result = Array.from(seen);
+        //     console.log(result); // Output: [1, 2, 3, 4, 5, 6, 7]
+
+// ----------------------------------------------------------------------------------------------------
+// Rotating an Array (left)
+    function leftRotate(array, n) {
+
+        n = n % array.length;
+
+
+        return array.slice(n).concat(array.slice(0, n));
+    }
+
+    let array = [1, 2, 3, 4, 5];
+    let n = 2;
+    let rotatedArray = leftRotate(array, n);
+
+    console.log(rotatedArray); // Output: [3, 4, 5, 1, 2]
+
+
+    </script>
+</body>
+
+</html>
